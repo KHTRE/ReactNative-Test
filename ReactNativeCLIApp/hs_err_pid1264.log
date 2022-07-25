@@ -1,0 +1,193 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffa71c3a4a3, pid=1264, tid=2460
+#
+# JRE version:  (11.0.12+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (11.0.12+8-LTS-237, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x1ca4a3]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Xmx16m org.eclipse.jdt.internal.launching.support.LibraryDetector
+
+Host: Intel(R) Core(TM) i9-10850K CPU @ 3.60GHz, 20 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1348)
+Time: Sun Jul 24 08:02:34 2022 FLE Daylight Time elapsed time: 0.012215 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000024038046000):  JavaThread "Unknown thread" [_thread_in_vm, id=2460, stack(0x000000c6a3200000,0x000000c6a3300000)]
+
+Stack: [0x000000c6a3200000,0x000000c6a3300000],  sp=0x000000c6a32fed00,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1ca4a3]
+V  [jvm.dll+0x1c86c3]
+V  [jvm.dll+0x34c44b]
+V  [jvm.dll+0x710400]
+V  [jvm.dll+0x3b5baf]
+V  [jvm.dll+0x3b7cb1]
+C  [jli.dll+0x520b]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000000000000000
+
+
+Registers:
+RAX=0x00002f371f886022, RBX=0x0000000000000000, RCX=0x0000000000000000, RDX=0x0000000000000000
+RSP=0x000000c6a32fed00, RBP=0x0000000000000000, RSI=0x0000024038046000, RDI=0x0000000000000000
+R8 =0x0000000000000000, R9 =0x0000000000000000, R10=0x0000000000000000, R11=0x000000c6a32feab0
+R12=0x0000000000000000, R13=0x00007ffa72035350, R14=0x0000024035ec1008, R15=0x000000c6a32ff758
+RIP=0x00007ffa71c3a4a3, EFLAGS=0x0000000000010256
+
+Top of Stack: (sp=0x000000c6a32fed00)
+0x000000c6a32fed00:   0000024035ec8010 00007ffad96a32c0
+0x000000c6a32fed10:   000000c6a32ff758 0000024035ec1008
+0x000000c6a32fed20:   0000000000000000 000000c6a32fef30
+0x000000c6a32fed30:   0000c380bd9c04ac 00007ffa72035350
+0x000000c6a32fed40:   0000000000000400 000000c6a32ff758
+0x000000c6a32fed50:   0000024035ec1008 00007ffa72035350
+0x000000c6a32fed60:   0000000000000000 00007ffaad4a0000
+0x000000c6a32fed70:   00007ffa722a59c0 0000000000000000
+0x000000c6a32fed80:   00007ffa71c38567 00007ffad96753dc
+0x000000c6a32fed90:   0000000000000000 00007ffa720ae1a3
+0x000000c6a32feda0:   00002f371f886022 0000024035ec1008
+0x000000c6a32fedb0:   00007ffa00000000 00007ffa72035350
+0x000000c6a32fedc0:   0000024038046000 000000c6a32feee0
+0x000000c6a32fedd0:   0000000000000000 00007ffa71c386c3
+0x000000c6a32fede0:   00007ffaaa550000 00007ffaad4ad0ac
+0x000000c6a32fedf0:   000000c6a32feee0 0000024038046000 
+
+Instructions: (pc=0x00007ffa71c3a4a3)
+0x00007ffa71c3a483:   00 48 33 c4 48 89 84 24 a0 00 00 00 48 8b e9 48
+0x00007ffa71c3a493:   c7 c3 ff ff ff ff 0f 1f 80 00 00 00 00 48 ff c3
+0x00007ffa71c3a4a3:   80 3c 0b 00 75 f7 33 f6 c6 44 24 30 01 40 38 35
+0x00007ffa71c3a4b3:   83 3b 86 00 74 17 40 38 35 c0 a1 85 00 75 0e 33 
+
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000024035ec1230, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000024038046000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=2460, stack(0x000000c6a3200000,0x000000c6a3300000)]
+
+Threads with active compile tasks:
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+
+[error occurred during error reporting (printing compressed oops mode), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffa7219b867]
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff77e750000 - 0x00007ff77e75f000 	C:\Program Files\Java\jdk-11.0.12\bin\javaw.exe
+0x00007ffadbaf0000 - 0x00007ffadbce5000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffadb6b0000 - 0x00007ffadb76e000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffad9670000 - 0x00007ffad9938000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffad9940000 - 0x00007ffad9a40000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffabe690000 - 0x00007ffabe6a8000 	C:\Program Files\Java\jdk-11.0.12\bin\jli.dll
+0x00007ffacf880000 - 0x00007ffacf895000 	C:\Program Files\Java\jdk-11.0.12\bin\VCRUNTIME140.dll
+0x00007ffad9ba0000 - 0x00007ffad9c4c000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffada690000 - 0x00007ffada72e000 	C:\Windows\System32\msvcrt.dll
+0x00007ffad9c60000 - 0x00007ffad9cfb000 	C:\Windows\System32\sechost.dll
+0x00007ffada880000 - 0x00007ffada9aa000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffadb4d0000 - 0x00007ffadb671000 	C:\Windows\System32\USER32.dll
+0x00007ffab54a0000 - 0x00007ffab573a000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffad9580000 - 0x00007ffad95a2000 	C:\Windows\System32\win32u.dll
+0x00007ffada850000 - 0x00007ffada87b000 	C:\Windows\System32\GDI32.dll
+0x00007ffad9260000 - 0x00007ffad936b000 	C:\Windows\System32\gdi32full.dll
+0x00007ffad9a40000 - 0x00007ffad9add000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffad2b50000 - 0x00007ffad2b5a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffadb680000 - 0x00007ffadb6b0000 	C:\Windows\System32\IMM32.DLL
+0x00007ffa78bb0000 - 0x00007ffa78c4b000 	C:\Program Files\Java\jdk-11.0.12\bin\msvcp140.dll
+0x00007ffa71a70000 - 0x00007ffa7256f000 	C:\Program Files\Java\jdk-11.0.12\bin\server\jvm.dll
+0x00007ffad9c50000 - 0x00007ffad9c58000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffab6960000 - 0x00007ffab6969000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffad2710000 - 0x00007ffad2737000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffadb460000 - 0x00007ffadb4cb000 	C:\Windows\System32\WS2_32.dll
+0x00007ffad70e0000 - 0x00007ffad70f2000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffad4c60000 - 0x00007ffad4c70000 	C:\Program Files\Java\jdk-11.0.12\bin\verify.dll
+0x00007ffad0230000 - 0x00007ffad0414000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ffaabfe0000 - 0x00007ffaac00c000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffad95e0000 - 0x00007ffad9663000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffaad4a0000 - 0x00007ffaad4c8000 	C:\Program Files\Java\jdk-11.0.12\bin\java.dll
+0x00007ffac0da0000 - 0x00007ffac0daa000 	C:\Program Files\Java\jdk-11.0.12\bin\jimage.dll
+0x00007ffaaa550000 - 0x00007ffaaa566000 	C:\Program Files\Java\jdk-11.0.12\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-11.0.12\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\Java\jdk-11.0.12\bin\server
+
+VM Arguments:
+jvm_args: -Xmx16m 
+java_command: org.eclipse.jdt.internal.launching.support.LibraryDetector
+java_class_path (initial): C:\Users\Professional\AppData\Roaming\Code\User\globalStorage\redhat.java\1.9.0\config_win\org.eclipse.osgi\52\0\.cp\lib\launchingsupport.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     uint G1ConcRefinementThreads                  = 15                                        {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 16777216                                  {product} {ergonomic}
+   size_t MaxHeapSize                              = 16777216                                  {product} {command line}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-18.0.2
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files\dotnet\;C:\Program Files\nssm;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DAC\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\Professional\AppData\LocalAndroidSdkplatform-tools;C:\Users\Professional\AppData\Local\Microsoft\WindowsApps;C:\Users\Professional\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Program Files\Azure Data Studio\bin;C:\Users\Professional\.dotnet\tools;C:\tools\dart-sdk\bin;C:\Users\Professional\AppData\Roaming\Pub\Cache\bin;C:\Program Files (x86)\Fiddler;C:\Users\Professional\.dotnet\tools;C:\Program Files (x86)\BrowserStackLocal\;C:\Users\Professional\AppData\Local\Android\Sdk\platform-tools;
+USERNAME=Professional
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 165 Stepping 5, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1348)
+
+CPU:total 20 (initial active 20) 
+
+Memory: 4k page, system-wide physical 16305M (3249M free)
+TotalPageFile size 23215M (AvailPageFile size 3315M)
+current process WorkingSet (physical memory assigned to process): 8M, peak: 8M
+current process commit charge ("private bytes"): 3M, peak: 3M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (11.0.12+8-LTS-237) for windows-amd64 JRE (11.0.12+8-LTS-237), built on Jun  8 2021 11:25:59 by "mach5one" with MS VC++ 15.9 (VS2017)
+
+END.
